@@ -1,0 +1,245 @@
+@charset "utf-8";
+.home-student-list{
+	/* height:3.8rem; */
+	width:100%;
+	padding:0.8rem;
+	border-top:1px solid #ddd;
+	border-bottom:1px solid #ddd;
+	overflow:hidden;
+}
+.home-student-list ul{
+	/* height:3.9rem;
+	width:10005rem;
+	overflow: hidden;
+	overflow-x: scroll;
+ */
+	width:100%;
+	display: inline;
+	white-space: nowrap;
+	overflow-x:scroll;
+	float:left;
+	overflow-y:hidden;
+}
+.home-student-list ul>li{
+	display:inline-block;
+	width:3rem;
+	text-align: center;
+	margin-right:1rem;
+}
+
+ .home-student-photo{
+	width:100%;
+	height:3rem;
+	border-radius: 50%;
+	border:2px solid #1a91eb;
+	
+}
+.home-student-list .home-student-photo>img{
+	width:90%;
+	height:90%;
+	padding:5%;
+	border-radius: 50%;
+}
+.home-student-detail{
+	margin:1rem 0.5rem;
+	overflow: hidden;
+}
+.home-student-detail .oral-score{
+	width:72%;
+}
+.home-student-detail .oral-score .oral-score-title {
+	height:1.8rem;
+	line-height:1.8rem;
+	background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#fefeff), to(#f5f8fb));
+	border:1px solid #e6eaee;
+	border-radius: 3px;
+	border-bottom: none;
+	padding:0 1rem;
+	
+}
+.home-student-detail .oral-score .oral-score-title .left{
+	font-size:0.7rem;
+}
+.home-student-detail .oral-score .oral-score-title .fright{color:#1a91eb;}
+.home-student-detail .oral-score .oral-score-box{
+	border:1px solid #e6eaee;
+	overflow: hidden;
+}
+.home-student-detail .oral-score .oral-score-box .left{border-right:1px solid #e6eaee;}
+
+.oral-score-box .left .oral-score-detail li .oral-text{
+	height:2rem;
+	padding-top:0.5rem;
+}
+.oral-score-box .left{
+	box-sizing: border-box;
+	padding-left:0.5rem;
+	width:60%;
+	border-right:1px solid #ddd;
+}
+.oral-score-box .left .oral-score-detail li .oral-text p{
+	color:#7f8fa4;
+}
+.oral-score-box .left .oral-score-detail li .oral-text h3{
+	color:#354052;
+}
+.oral-score-box .other-score{
+	
+	box-sizing: border-box;
+	margin-left:60%;
+}
+.oral-score-box .other-score h3{
+	padding-left:5%;
+	line-height:2rem;
+	color: #7f8fa4;
+}
+.oral-score-box .other-score .other-score-list{
+	width:90%;
+	padding-left:5%;
+}
+.oral-score-box .other-score .other-score-list li{
+	line-height:1.3rem;
+	border-bottom:1px solid #e6eaee;
+}
+.oral-score-box .other-score .other-score-list li:last-child{border:none;}
+.oral-score-box .other-score .other-score-list li>span:first-child{
+	display: inline-block;
+	color:#354052;
+	width:80%;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+.oral-score-box .other-score .other-score-list li>span:nth-child(2){
+	color:#7f8fa4;
+	float:right;
+}
+.submit-state {margin-left:73%;}
+.submit-state .study-reports{
+	width:100%;
+	background-color:#36ae46;
+	color:#fff;
+	height:1.6rem;
+	line-height:1.6rem;
+	text-align: center;
+	border-radius: 4px;
+	position:relative;
+}
+.submit-state .study-reports>i{
+	color:#b0edb8;
+	position:absolute;
+	left:1.3rem;
+}
+.submit-state .submitted-work{
+	margin-top:0.6rem;
+}
+.submit-state .submitted-work>li>p{
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	overflow: hidden;
+	color:#aeb6c5;
+}
+.submit-state .submitted-work>li>.submitted-work-title{
+	line-height:1.2rem;
+	color:#475364;
+}
+.submit-state .submitted-work>li{
+	border:1px solid #e7e9ed;
+	border-radius: 3px;
+	padding:0.2rem 0.4rem;
+	margin-bottom:0.4rem;
+}
+.home-statistical{
+    display:-webkit-box;
+	display:flex;
+    display:-ms-flex;
+    display:-webkit-flex;
+　　	width:100%;
+}
+.home-statistical>.class-rank,.home-statistical>.score-statistics,
+.home-statistical>.won-praise,.home-statistical>.basic{
+	height:6rem;
+    flex:1;
+    -ms-flex:1;
+    -webkit-flex:1;
+    -webkit-box-flex:1;
+	margin: 0 0.5rem;
+    position: relative;
+    text-align:center;
+	border:1px solid #e6eaee;
+	border-radius: 3px;
+	padding-top:0.5rem;
+}
+.home-statistical>div>h1{
+	line-height:2rem;
+}
+.home-statistical>div>p{line-height:1.2rem;}
+.home-statistical>div>.poorly{
+	position: absolute;
+	bottom:0;
+	width:100%;
+	height:2rem;
+	line-height:2rem;
+	background-color:#f5f8fa;
+}
+ /* 朗读短句*/
+ .read-sentences-list>li{
+	 padding: 0.8rem 1.5rem;
+	 border-top:2px solid #e6eaee;
+ }
+ .read-sentences-list>li>p{
+	 font-size:0.8rem;
+ }
+ .read-sentences-list>li>div{margin-top:1rem;}
+ .read-sentences-list>li>div>.recording,
+ .read-sentences-list>li>div>.play-record{
+	 width:4.5rem;
+	 height:1.8rem;
+	 line-height: 1.8rem;
+	 color:#fff;
+	 text-align: center;
+	 margin-right:1rem;
+	 position: relative;
+	 border-radius: 4px;
+ }
+ .read-sentences-list>li>div>.recording{
+	 background-color:#1e95ee;
+ }
+ .read-sentences-list>li>div>.play-record{
+	 background-color:#37af47;
+ }
+ .read-sentences-list>li>div>.recording>i{
+	 position:absolute;
+	 left:0.4rem;
+	 font-size:1.1rem;
+ }
+ .read-sentences-list>li>div>.play-record>i{
+ 	position:absolute;
+ 	left:0.5rem;
+ 	font-size:0.8rem;
+	top: 0.1rem;
+ }
+ .read-sentences-list .progress-back{
+	 margin-left:0.3rem;
+	 width:8.5rem;
+	 height:0.7rem;
+	 background-color:#dfe4ee;
+	 border-radius:0.35rem;
+	 position:relative;
+ }
+ .read-sentences-list .progress-bar{
+	 position: absolute;
+	 left:0;
+	 top:0;
+	 width:82%;
+	 height:0.7rem;
+	 border-radius:0.35rem;
+	 background-color:#38b923;
+ }
+.read-sentences-list .page-number{
+	line-height: 1.8rem;
+}
+.read-sentences-list .page-number .special-color{color:#279cf4;}
+ 
+

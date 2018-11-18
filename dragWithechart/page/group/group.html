@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>学生端-分组讨论</title>
+	<link rel="stylesheet" href="../../css/common.css">
+	<link rel="stylesheet" href="../../css/landscape.css">
+	<link rel="stylesheet" href="../../css/group.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_913192_xpayab7xk5.css">
+    <script type="text/javascript">
+        function stops(){
+            return false;
+        }
+        document.oncontextmenu=stops;
+    </script>
+</head>
+<body onload="loadEvent()">
+	<div class="scores-ranking">分组讨论</div>
+	<div class="group-wrapper clearfix">
+        <div class="fleft left-wrapper">
+            <form action="">
+                <div class="group-item">
+                    <label for="">班级</label>
+                    <div class="group-class">
+                        <select name="classd" id="">
+                            <option value="class1">英语一班</option>
+                            <option value="class1">英语一班</option>
+                            <option value="class1">英语一班</option>
+                            <option value="class1">英语一班</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="group-item">
+                    <label for="">任务设置</label>
+                    <div class="group-class">
+                        <select name="task" id="">
+                            <option value="class1">每组语音得分大于80分</option>
+                            <option value="class1">每组语音得分大于80分</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="group-item">
+                    <label>分组方式</label>
+                    <div class="group-type-wrapper">
+                        <div class="group-type-box clearfix">
+                            <label for="sj" class="first-line"><input type="radio" id="sj" name="gtype" value="1">随机分组</label>
+                            <label for="zy" class="mid-line active"><input type="radio" id="zy" name="gtype" value="2">最优分组</label>
+                            <label for="cy" class="last-line"><input type="radio" id="cy" name="gtype" value="3">差异分组</label>
+                        </div>
+                    </div>
+                    <div class="group-type-wrapper">
+                        <div class="group-type-box clearfix">
+                            <label for="xb" class="first-line"><input type="radio" id="xb" name="gtype" value="4">性别分组</label>
+                            <label for="sd" class="mid-line"><input type="radio" id="sd" name="gtype" value="5">手动分组</label>
+                            <label for="hy" class="last-line"><input type="radio" id="hy" name="gtype" value="6">活跃分组</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="group-item">
+                    <label for="">每组人数</label>
+                    <div class="group-process-box change-process-box">
+                        <div class="group-process change-process">
+                            <p><i></i></p>
+                        </div>
+                        <input type="text" readonly name="num" value="4" id="group-num">
+                    </div>
+                </div>
+                <div class="group-item">
+                    <label for="">每组人数</label>
+                    <div class="group-process-box">
+                        <div class="group-process">
+                            <p class="process-full"><i></i></p>
+                        </div>
+                        <input type="text" readonly value="16">
+                    </div>
+                </div>
+                <div class="group-desc">
+                    <h3>分组说明</h3>
+                    <p>1、根据之前BASIC问卷调查,进行互补最优</p>
+                    <p>2、根据之前系统给学生的语音评分,进行互</p>
+                    <p>3、可拖动学生头像进行修改分组</p>
+                </div>
+                <div class="group-submit"><input type="submit" value="确认分配" class="subtn"></div>
+            </form>
+        </div>
+        <div class="fright right-wrapper">
+            <div class="rebtn-box"><a href="#"><img src="../../images/refresh.png" alt="refresh-icon"></a></div>
+            <ul class='right-content clearfix'>
+                <li>
+                    <div class="item-box">
+                        <div class="clearfix item-sub-box">
+                            <div class="adver-item">
+                                <img src="../../images/user.png" alt="user-icon">
+                                <p>Nikki</p>
+                            </div>
+                            <div class="adver-item">
+                                <img src="../../images/user.png" alt="user-icon">
+                                <p>Nikki</p>
+                            </div>
+                            <div class="adver-item">
+                                <img src="../../images/user.png" alt="user-icon">
+                                <p>Nikki</p>
+                            </div>
+                            <div class="adver-item">
+                                <img src="../../images/user.png" alt="user-icon">
+                                <p>Nikki</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>A组</h3>
+                </li>
+                <li>
+                    <div class="item-box">
+                        <div class="clearfix item-sub-box">
+                            <div class="adver-item">
+                                <img src="../../images/user.png" alt="user-icon">
+                                <p>Nikki</p>
+                            </div>
+                            <div class="adver-item">
+                                <img src="../../images/user.png" alt="user-icon">
+                                <p>Nikki</p>
+                            </div>
+                            <div class="adver-item">
+                                <img src="../../images/user.png" alt="user-icon">
+                                <p>Nikki</p>
+                            </div>
+                            <div class="adver-item">
+                                <img src="../../images/user.png" alt="user-icon">
+                                <p>Nikki</p>
+                            </div>
+                            <div class="adver-item">
+                                <img src="../../images/user.png" alt="user-icon">
+                                <p>Nikki</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>A组</h3>
+                </li>
+                <li>
+                    <div class="item-box">
+                        <div class="clearfix item-sub-box">
+                            <div class="adver-item">
+                                <img src="../../images/user.png" alt="user-icon">
+                                <p>Nikki</p>
+                            </div>
+                            <div class="adver-item">
+                                <img src="../../images/user.png" alt="user-icon">
+                                <p>Nikki</p>
+                            </div>
+                            <div class="adver-item">
+                                <img src="../../images/user.png" alt="user-icon">
+                                <p>Nikki</p>
+                            </div>
+                            <div class="adver-item">
+                                <img src="../../images/user.png" alt="user-icon">
+                                <p>Nikki</p>
+                            </div>
+                            <div class="adver-item">
+                                <img src="../../images/user.png" alt="user-icon">
+                                <p>Nikki</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>A组</h3>
+                </li>
+                <li>
+                    <div class="item-box">
+                        <div class="clearfix item-sub-box">
+                            <div class="adver-item">
+                                <img src="../../images/user.png" alt="user-icon">
+                                <p>Nikki</p>
+                            </div>
+                            <div class="adver-item">
+                                <img src="../../images/user.png" alt="user-icon">
+                                <p>Nikki</p>
+                            </div>
+                            <div class="adver-item">
+                                <img src="../../images/user.png" alt="user-icon">
+                                <p>Nikki</p>
+                            </div>
+                            <div class="adver-item">
+                                <img src="../../images/user.png" alt="user-icon">
+                                <p>Nikki</p>
+                            </div>
+                            <div class="adver-item">
+                                <img src="../../images/user.png" alt="user-icon">
+                                <p>Nikki</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>A组</h3>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="../../js/jquery.min.js"></script>
+    <script type="text/javascript">
+        $("input[name='gtype']").on("click",function(){
+            if($(this).prop("checked")){
+                $(".group-type-box").find("label").removeClass('active');
+                $(this).closest('label').addClass('active');
+            }
+        })
+
+        $(function(){
+            var tag = false;
+            var startx = 0;
+            var left = 0;
+            var bgleft = 0;
+            var len = $(".change-process").width();
+            $(".change-process").on("mousedown",'i',function(e){
+                processDown(e);
+            })
+            $(".change-process").on('mousemove',function(e){
+                proressmove(e)
+            })
+
+            $(".change-process").on("touchstart",'i',function(e){
+                processDown(e);
+            })
+            $(".change-process").on('touchmove',function(e){
+                proressmove(e)
+            })
+            $(document).mouseup(function() {
+                proressend()
+            });
+
+            function processDown(e){
+                tag = true;
+                if(e.originalEvent.touches){
+                    startx = e.originalEvent.targetTouches[0].pageX - left;
+                }else{
+                    startx = e.pageX - left;
+                }
+            }
+
+            function proressend(){
+                flag = false;
+            }
+            function proressmove(e){
+                if(tag) {
+                    if(e.originalEvent.touches){
+                        left = e.originalEvent.targetTouches[0].pageX - startx;
+                    }else{
+                        left = e.pageX - startx;
+                    }
+                    
+                    if(left <= 0) {
+                        left = 0;
+                    }else if(left > len) {
+                        left = len;
+                    }
+                    $(".change-process p").width(left)
+                    var num = Math.floor((left*16)/len)
+                    $("#group-num").val(num)
+                }
+                e.preventDefault();
+            }
+        })
+
+        
+
+       
+
+        function loadEvent(){
+            if(IsPC()){
+                ;(function($){
+                    var tag = true
+                    $(".right-content").on("mousedown",'.adver-item',function(e){
+                        if(tag){
+                            tag = false;
+                            var that = this;
+                            var disx = e.offsetX; //获取的拖拽过程的短线的长度（鼠标的位置离盒子边缘的位置）
+                            var disy = e.offsetY;
+                            var leftd,topd;
+                            $(that).closest('li').addClass('old');
+                            var $clone = $(that).clone(); //克隆
+                            $clone.addClass('act').css({ //对克隆的盒子设置类名以及位置
+                                left: $(that).position().left,
+                                top: $(that).position().top,
+                            });
+                            $(that).closest(".item-sub-box").append($clone);
+                            $(that).html('');
+                            
+                            $(".right-wrapper").on('mousemove',function(e){
+                                e.preventDefault();
+                                leftd = e.pageX - $(this).position().left - disx;
+                                topd = e.pageY -  $(this).position().top - disy
+                                $clone.css({
+                                    left: leftd,
+                                    top: topd
+                                })
+                            })
+
+                            var boxd = $(".right-content>li").not('.old');
+                            $clone.on('mouseup',function(){
+                                var self = $(this);
+                                var $clone2 = self.clone();
+                                boxd.each(function(index,item){
+                                    var left = $(item).position().left;
+                                    var top = $(item).position().top;
+                                    var bottom = $(item).height()+top;
+                                    var right = $(item).width()+left;
+                                    if(parseInt(Math.floor(leftd)) >= parseInt(Math.floor(left)) && parseInt(Math.floor(leftd)) <= parseInt(Math.floor(right)) && parseInt(Math.floor(topd)) >= parseInt(Math.floor(top)) && parseInt(Math.floor(topd)) <= parseInt(Math.floor(bottom))){
+                                    $(item).addClass("This");
+                                        var indexd = $(item).index();
+                                        $("li").eq(indexd).find('.item-sub-box').append($clone2);
+                                        $clone.remove(); //移除克隆的盒子
+                                        $(that).remove();
+                                    }else{
+                                        $clone2.removeClass('act');
+                                        $clone2.attr('style','');
+                                        $(that).closest('.item-sub-box').append($clone2)
+                                        $clone.remove();
+                                        $(that).remove();
+                                    }
+                                    
+                                })
+                                tag = true;
+                                $(".old").removeClass('old');
+                                $('document').off('mousemove');
+                            })
+                        }
+                        tag = true
+                        return false;
+                    })
+                })($)
+                console.log(111)
+            }else{
+                console.log(222)
+                ;(function($){
+                    var tag = true
+                    $(".right-content").on("touchstart",'.adver-item',function(e){
+                        if(tag){
+                            tag = false;
+                            var that = this;
+                            var disx = e.originalEvent.changedTouches[0].pageX - $(that).position().left; //获取的拖拽过程的短线的长度（鼠标的位置离盒子边缘的位置）
+                            var disy = e.originalEvent.changedTouches[0].pageY - $(that).position().top;
+                            var leftd,topd;
+                            $(that).closest('li').addClass('old');
+                            $clone = $(that).clone(); //克隆
+                            $clone.addClass('act').css({ //对克隆的盒子设置类名以及位置
+                                left: $(that).position().left,
+                                top: $(that).position().top,
+                            });
+
+                            $(that).closest(".item-sub-box").append($clone);
+                            $(that).html('');
+                            $(".right-content").on("touchmove",'.act',function(e){
+                                e.preventDefault();
+                                leftd = e.originalEvent.targetTouches[0].pageX - disx;
+                                topd = e.originalEvent.targetTouches[0].pageY - disy;
+                                $clone.css({
+                                    left: leftd,
+                                    top: topd
+                                })
+                            })
+
+                            var boxd = $(".right-content>li").not('.old');
+                            $clone.on('touchend',function(){
+                                var self = $(this);
+                                var $clone2 = self.clone();
+                                boxd.each(function(index,item){
+                                    var left = $(item).position().left;
+                                    var top = $(item).position().top;
+                                    var bottom = $(item).height()+top;
+                                    var right = $(item).width()+left;
+                                    if(parseInt(Math.floor(leftd)) >= parseInt(Math.floor(left)) && parseInt(Math.floor(leftd)) <= parseInt(Math.floor(right)) && parseInt(Math.floor(topd)) >= parseInt(Math.floor(top)) && parseInt(Math.floor(topd)) <= parseInt(Math.floor(bottom))){
+                                        $(item).addClass("This");
+                                        var indexd = $(item).index();
+                                        $("li").eq(indexd).find('.item-sub-box').append($clone2);
+                                        $clone.remove(); //移除克隆的盒子
+                                        $(that).remove();
+                                    }else{
+                                        $clone2.removeClass('act');
+                                        $clone2.attr('style','');
+                                        $(that).closest('.item-sub-box').append($clone2)
+                                        $clone.remove();
+                                        $(that).remove();
+                                    }
+                                })
+                                tag = true;
+                                $(".old").removeClass('old');
+                                $('document').off('touchmove');
+                            })
+                        }
+                    })
+                    tag = true;
+                    return false;
+                })($)
+            }
+        }
+
+        function IsPC() {
+            var userAgentInfo = navigator.userAgent;
+            var Agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
+            var flag = true;
+            for (var v = 0; v < Agents.length; v++) {
+                if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                    flag = false;
+                    break;
+                }
+            }
+            return flag;
+        }
+    </script>
+</body>
+</html>

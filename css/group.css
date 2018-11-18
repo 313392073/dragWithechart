@@ -1,0 +1,243 @@
+@charset "utf-8";
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+.clearfix::after {
+  clear: both;
+}
+* {
+  box-sizing: border-box;
+}
+.group-wrapper {
+  width: 100%;
+  border-top: 2px solid #e6eaee;
+  overflow-x: auto;
+}
+.group-wrapper .left-wrapper {
+  width: 26.5625%;
+  border-right: 2px solid #e6eaee;
+  padding: 3.125% 3.9% 3.125% 3.125%;
+}
+.group-wrapper .left-wrapper .group-item {
+  text-align: left;
+  margin-top: 1.25rem;
+}
+.group-wrapper .left-wrapper .group-item label {
+  font-size: 0.75rem;
+  color: #475364;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+.group-wrapper .left-wrapper .group-item .group-class {
+  border-bottom: 2px solid #e6eaee;
+}
+.group-wrapper .left-wrapper .group-item .group-class select {
+  border: none;
+  outline: none;
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  padding-right: 0.1rem;
+  color: #9FA9BA;
+  padding: 0.5rem 0;
+  overflow: hidden;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: url("../images/downsj.png") no-repeat scroll right center transparent;
+}
+.group-wrapper .left-wrapper .group-item .group-class select::-ms-expand {
+  display: none;
+}
+.group-wrapper .left-wrapper .group-item .group-type-wrapper {
+  margin-top: 0.4rem;
+}
+.group-wrapper .left-wrapper .group-item .group-type-wrapper .group-type-box label {
+  position: relative;
+  display: inline-block;
+  background: #FFFFFF;
+  font-size: 14px;
+  color: #B3BECC;
+  text-align: center;
+  float: left;
+  width: 33.33%;
+  border: 1px solid #CCCFD4;
+  padding: 0.3rem 0.4rem;
+}
+.group-wrapper .left-wrapper .group-item .group-type-wrapper .group-type-box label input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+.group-wrapper .left-wrapper .group-item .group-type-wrapper .group-type-box label.mid-line {
+  border-left: none;
+  border-right: none;
+}
+.group-wrapper .left-wrapper .group-item .group-type-wrapper .group-type-box label.first-line {
+  border-radius: 0.2rem 0 0 0.2rem;
+}
+.group-wrapper .left-wrapper .group-item .group-type-wrapper .group-type-box label.last-line {
+  border-radius: 0 0.2rem 0.2rem 0;
+}
+.group-wrapper .left-wrapper .group-item .group-type-wrapper .group-type-box label.active {
+  background: rgba(24, 128, 231, 0.1);
+  border: 1px solid #0077FF;
+  color: #1880E7;
+}
+.group-wrapper .left-wrapper .group-item .group-process-box {
+  position: relative;
+  padding: 0.5rem;
+  width: 100%;
+  height: 1.8rem;
+}
+.group-wrapper .left-wrapper .group-item .group-process-box .group-process {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: calc(100% - 70*0.05rem);
+  height: 1px;
+  background-color: #D8DDE3;
+}
+.group-wrapper .left-wrapper .group-item .group-process-box .group-process p {
+  width: 20%;
+  height: 2px;
+  background-color: #0077FF;
+  position: relative;
+}
+.group-wrapper .left-wrapper .group-item .group-process-box .group-process p i {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -0.2rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 0.2rem;
+  background-color: #0077FF;
+  cursor: pointer;
+}
+.group-wrapper .left-wrapper .group-item .group-process-box .group-process p.process-full {
+  width: 100%;
+}
+.group-wrapper .left-wrapper .group-item .group-process-box input {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -0.9rem;
+  width: 2.35rem;
+  height: 1.8rem;
+  line-height: 1.8rem;
+  text-align: center;
+  font-size: 14px;
+  color: #9FA9BA;
+  border: 1px solid #CCCFD4;
+  border-radius: 4px;
+}
+.group-wrapper .left-wrapper .group-desc {
+  margin: 1.25rem 0;
+}
+.group-wrapper .left-wrapper .group-submit {
+  text-align: center;
+}
+.group-wrapper .left-wrapper .group-submit .subtn {
+  border: 1px solid #0C77F8;
+  border-radius: 4px;
+  font-size: 18px;
+  color: #0C77F8;
+  background-color: #FFFFFF;
+  display: inline-block;
+  padding: 0.2rem 0.8rem;
+  cursor: pointer;
+}
+.group-wrapper .right-wrapper {
+  width: 73.4375%;
+  position: relative;
+}
+.group-wrapper .right-wrapper .rebtn-box {
+  position: relative;
+  height: 2.5rem;
+}
+.group-wrapper .right-wrapper .rebtn-box a {
+  position: absolute;
+  right: 3%;
+  top: 75%;
+  margin-top: -0.4rem;
+}
+.group-wrapper .right-wrapper .right-content {
+  width: 100%;
+  padding: 1% 5%;
+}
+.group-wrapper .right-wrapper .right-content li {
+  float: left;
+  width: 48%;
+  margin-top: 1rem;
+  border: 1px solid #0C77F8;
+  border-radius: 4px;
+}
+.group-wrapper .right-wrapper .right-content li:nth-child(2n) {
+  margin-left: 4%;
+}
+.group-wrapper .right-wrapper .right-content li .item-box {
+  min-height: 7.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.group-wrapper .right-wrapper .right-content li .item-box > div {
+  margin: 0.5rem auto;
+}
+.group-wrapper .right-wrapper .right-content li .item-box > div .adver-item {
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: grab;
+  float: left;
+  min-width: 2.5rem;
+  min-height: 3rem;
+  text-align: center;
+  position: relative;
+}
+.group-wrapper .right-wrapper .right-content li .item-box > div .adver-item img {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+}
+.group-wrapper .right-wrapper .right-content li .item-box > div .adver-item.act {
+  position: absolute;
+  z-index: 500;
+  text-align: center;
+}
+.group-wrapper .right-wrapper .right-content li .item-box > div .adver-item.act img {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  background: goldenrod;
+  box-shadow: 0 0 2px 2px #555;
+}
+.group-wrapper .right-wrapper .right-content li h3 {
+  border-top: 1px solid #0C77F8;
+  text-align: center;
+  font-size: 1.05rem;
+  color: #354052;
+  min-height: 3.3rem;
+  line-height: 3.3rem;
+}
+.group-wrapper .right-wrapper .right-content li:nth-child(2) {
+  border: 1px solid #38B923;
+}
+.group-wrapper .right-wrapper .right-content li:nth-child(2) h3 {
+  border-top: 1px solid #38B923;
+}
+.group-wrapper .right-wrapper .right-content li:nth-child(3) {
+  border: 1px solid #D54642;
+}
+.group-wrapper .right-wrapper .right-content li:nth-child(3) h3 {
+  border-top: 1px solid #D54642;
+}
+.group-wrapper .right-wrapper .right-content li:nth-child(4) {
+  border: 1px solid #FF7800;
+}
+.group-wrapper .right-wrapper .right-content li:nth-child(4) h3 {
+  border-top: 1px solid #FF7800;
+}

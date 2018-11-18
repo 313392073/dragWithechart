@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+        <meta content="telephone=no,email=no" name="format-detection">
+        <title>学生端-分组讨论</title>
+        <link rel="stylesheet" href="../../css/common.css">
+        <link rel="stylesheet" href="../../css/landscape.css">
+        <link rel="stylesheet" href="../../css/tchsum.css">
+        <link rel="stylesheet" href="http://at.alicdn.com/t/font_913192_xpayab7xk5.css">
+    </head>
+<body>
+    <div class="scores-ranking">老师总结</div>
+    <div class="tchsum-wrapper">
+        <div class="pro-wrapper clearfix">
+            <div class="pro-left">
+                <div class="echarts-box" id="main"></div>
+                <div class="select-box">
+                    <p class="selectd">所有种类 <i></i></p>
+                    <div class="checkbox-box">
+                            <p><label class="checkbox-item"><input class="input_checkbox" type="checkbox" data-name="流利程度" data-last="81" data-tweek="83" checked /><i>✓</i></label><span>流利程度</span></p>
+                            <p><label class="checkbox-item"><input class="input_checkbox" type="checkbox" data-name="语法准确度" data-last="83" data-tweek="85" checked /><i>✓</i></label><span>语法准确度</span></p>
+                            <p><label class="checkbox-item"><input class="input_checkbox" type="checkbox" data-name="声音清晰度" data-last="85" data-tweek="87" checked /><i>✓</i></label><span>声音清晰度</span></p>
+                            <p><label class="checkbox-item"><input class="input_checkbox" type="checkbox" data-name="语法完整度" data-last="87" data-tweek="89" checked /><i>✓</i></label><span>语法完整度</span></p>
+                            <p><label class="checkbox-item"><input class="input_checkbox" type="checkbox" data-name="语感" data-last="91" data-tweek="91" checked /><i>✓</i></label><span>语感</span></p>
+                            <p><label class="checkbox-item"><input class="input_checkbox" type="checkbox" data-name="口语时长" data-last="93" data-tweek="93" checked /><i>✓</i></label><span>口语时长</span></p>
+                            <p><label class="checkbox-item"><input class="input_checkbox" type="checkbox" data-name="句型频次" data-last="95" data-tweek="85" checked /><i>✓</i></label><span>句型频次</span></p>
+                            <p><label class="checkbox-item"><input class="input_checkbox" type="checkbox" data-name="互动率" data-last="85" data-tweek="97" checked /><i>✓</i></label><span>互动率</span></p>
+                           <div>
+                               <button id="qbtn">确定</button>
+                               <button id="obtn">取消</button>
+                           </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="pro-right">
+                <div class="pro-detail-top">
+                    <h3>课堂平均分</h3>
+                    <p>英语一班（16人）</p>
+                    <h3>82分 <p><img src="../../images/uparr.png"/>12.5%</p></h3>
+                </div>
+                <div class="pro-detail-box">
+                    <div class="detail-title-box clearfix">
+                        <span class="detail-title-left">流利程度</span>
+                        <a class="detail-title-left" href="javascript:void(0)">查看详情</a>
+                    </div>
+                    <ul class="detail-item-box">
+                        <li class="clearfix">
+                            <span class="detail-item-left">流利程度</span>
+                            <span class="detail-item-right">83</span>
+                        </li>
+                        <li class="clearfix">
+                            <span class="detail-item-left">语法准确度</span>
+                            <span class="detail-item-right">83</span>
+                        </li>
+                        <li class="clearfix">
+                            <span class="detail-item-left">语法准确度</span>
+                            <span class="detail-item-right">83</span>
+                        </li>
+                        <li class="clearfix">
+                            <span class="detail-item-left">语法完整度</span>
+                            <span class="detail-item-right">83</span>
+                        </li>
+                        <li class="clearfix">
+                            <span class="detail-item-left">语感</span>
+                            <span class="detail-item-right">83</span>
+                        </li>
+                    </ul>
+                    <div class="detail-title-box clearfix">
+                        <span class="detail-title-left">其他评分</span>
+                        <a class="detail-title-left" href="javascript:void(0)">查看详情</a>
+                    </div>
+                    <ul class="detail-item-box">
+                        <li class="clearfix">
+                            <span class="detail-item-left">句型频次</span>
+                            <span class="detail-item-right">83</span>
+                        </li>
+                        <li class="clearfix">
+                            <span class="detail-item-left">互动率</span>
+                            <span class="detail-item-right">83</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="pro-detail-wrapper">
+            <table>
+                <thead>
+                    <tr class="tr-title">
+                        <th class="th-name">学生姓名</th>
+                        <th class="th-good">优势项</th>
+                        <th class="th-zan">获赞数</th>
+                        <th class="th-total">分数统计</th>
+                        <th class="th-report">详细报告</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="td-name"><img src="../../images/user.png" alt="user-icon"><span>JSON JOSHION</span></td>
+                        <td class="td-good"><span class="color1"></span>流利程度</td>
+                        <td>18</td>
+                        <td class="td-total clearfix"><span>20</span> <div><p></p></div></td>
+                        <td class="td-report"><img src="../../images/icon_eye.png" alt="icon_eye"> View Report</td>
+                    </tr>
+                    <tr>
+                        <td class="td-name"><img src="../../images/user.png" alt="user-icon"><span>JSON JOSHION</span></td>
+                        <td class="td-good"><span class="color2"></span>流利程度</td>
+                        <td>18</td>
+                        <td class="td-total clearfix"><span>78</span> <div><p class="percent78"></p></div></td>
+                        <td class="td-report"><img src="../../images/icon_eye.png" alt="icon_eye"> View Report</td>
+                    </tr>
+                    <tr>
+                        <td class="td-name"><img src="../../images/user.png" alt="user-icon"><span>JSON JOSHION</span></td>
+                        <td class="td-good"><span class="color3"></span>流利程度</td>
+                        <td>18</td>
+                        <td class="td-total clearfix"><span>83</span> <div><p class="percent83"></p></div></td>
+                        <td class="td-report"><img src="../../images/icon_eye.png" alt="icon_eye"> View Report</td>
+                    </tr>
+                    <tr>
+                        <td class="td-name"><img src="../../images/user.png" alt="user-icon"><span>JSON JOSHION</span></td>
+                        <td class="td-good"><span class="color4"></span>流利程度</td>
+                        <td>18</td>
+                        <td class="td-total clearfix"><span>20</span> <div><p></p></div></td>
+                        <td class="td-report"><img src="../../images/icon_eye.png" alt="icon_eye"> View Report</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/echarts.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            var myChart = echarts.init(document.getElementById('main'));
+            var thisWeek = []; //初始化页面这周的值
+            var lastWeek = []; //初始化页面上周的值
+            var selData = []; //初始化页面水平方向的值
+            /**
+             * 得到初始化的值 动态绑定在下来的checkbox 上面就可以了
+             * 
+            */
+
+            var option = {
+                color:['#2297F0','#3073B5'],
+                title:{
+                    text:'班级概况',
+                    textStyle: {
+                        fontSize: 14,
+                        fontWeight: 'normal',
+                        color: '#354052'
+                    },
+                },
+                tooltip : {
+                    trigger: 'axis',
+                    backgroundColor:'#222C3C',
+                    textStyle:{
+                        color:"#F0F3F8",
+                        align:'center',
+                        fontSize:14
+                    },
+                    axisPointer:{
+                        color:'#ff9900'
+                    }
+                },
+                legend: {
+                    borderColor: 'rgba(178,34,34,0.8)',
+                    textStyle:{
+                        fontSize:14,
+                        color:"#354052"
+                    },
+                    data:[{
+                        name:'本周分数'
+                    },{
+                        name:'上周分数',
+                        // icon:'image://../../images/user.png'
+                    }]
+                },
+                toolbox: {
+                    show : false,
+                },
+                markPoint:{
+
+                },
+                grid:{
+                    borderWidth:0,
+                },
+                calculable : true,
+                xAxis : [
+                    {
+                        type : 'category',
+                        boundaryGap : false,
+                        axisLine:{
+                            lineStyle:{
+                                width:1,
+                                color:'#e6eaee'
+                            }
+                        },
+                        axisTick:{
+                            show:false,
+                        },
+                        axisLabel:{
+                            textStyle: {
+                                fontSize: 12,
+                                color: '#9B9B9B'
+                            }
+                        },
+                        splitLine:{
+                            lineStyle:{
+                                width:1,
+                                color:'rgba(0, 0, 0, 0)'
+                            }
+                        },
+                        data:selData.length>0?selData:['流利程度','语法准确度','声音清晰度','语法完整度','语感','口语时长','句型频次','互动率']
+                    }
+                ],
+                yAxis : [
+                    {
+                        type : 'value',
+                        axisLine:{
+                            lineStyle:{
+                                width:1,
+                                color:'#e6eaee'
+                            }
+                        },
+                        axisTick:{
+                            show:false,
+                        },
+                        axisLabel:{
+                            textStyle: {
+                                fontSize: 12,
+                                color: '#9B9B9B'
+                            }
+                        },
+                        splitLine:{
+                            lineStyle:{
+                                width:1,
+                                color:'rgba(0, 0, 0, 0.1)'
+                            }
+                        }
+                    }
+                ],
+                series : [
+                    {
+                        name:'本周分数',
+                        type:'line',
+                        symbol:"emptyCircle",
+                        symbolSize:12,
+                        itemStyle:{
+                            normal:{
+                                lineStyle:{
+                                    color:"#2297F0",
+                                    width:2
+                                },
+                                borderColor:"#2297F0"
+                            }
+                        },
+                        data:thisWeek.length>0?thisWeek:[
+                            85, 86,98,87,89,98,88,90
+                        ]
+                    },
+                    {
+                        name:'上周分数',
+                        type:'line',
+                        symbol:"circle",
+                        symbolSize:12,
+                        itemStyle:{
+                            normal:{
+                                lineStyle:{
+                                    color:"#3073B5",
+                                    width:2
+                                },
+                                areaStyle:{
+                                    color:'#DFE9F5'
+                                },
+                                borderColor:"#3073B5"
+                            }
+                        },
+                        data:lastWeek.length>0?lastWeek:[
+                            82, 82,97,85,84,97, 82,80
+                        ]
+                    }
+                ]
+            };
+            //初始化页面
+            myChart.setOption(option)
+            //动态请求
+            function getData(){
+                $.ajax({
+                    type:'',
+                    url:'',
+                    data:{},
+                    dataType:'json',
+                    success:function(res){
+                        thisWeek = res.data.thisWeek;
+                        lastWeek = res.data.lastWeek;
+                        selData = res.data.selData; 
+
+                        option.xAxis[0].data = selData;
+                        option.series[0]['data'] = thisWeek;
+                        option.series[1]['data'] = lastWeek;
+                        myChart.setOption(option)
+                    },
+                    err:function(err){
+                        alert('网络错误,请稍后再操作~~');
+                    }
+                })
+            }
+
+            //下拉
+            $(".selectd").on("click",function(){
+                var tag = $(this).siblings('.checkbox-box').css('display');
+                if(tag == 'none'){
+                    $(this).find("i").addClass('active');
+                    $(this).siblings('.checkbox-box').show();
+                }else{
+                    
+                    $(this).find("i").removeClass('active');
+                    $(this).siblings('.checkbox-box').hide();
+                }
+            })
+
+            //取消按钮
+            $("#obtn").on("click",function(){
+                $(".input_checkbox").each(function(index,item){
+                    $(item).prop('checked',true)
+                })
+                $(".selectd").find("i").removeClass('active');
+                $(".checkbox-box").hide();
+            })
+            //  确定按钮
+            $("#qbtn").on("click",function(){
+                $(".selectd").find("i").removeClass('active');
+                $(".checkbox-box").hide();
+                var arr = [],larr=[],tarr = [];
+                $(".input_checkbox").each(function(index,item){
+                    if($(item).prop('checked')) {
+                        arr.push($.trim($(item).attr('data-name')));
+                        larr.push($.trim($(item).attr('data-last')))
+                        tarr.push($.trim($(item).attr('data-tweek')))
+                    }
+                })
+                return new Promise(function(resolve,reject){
+                    var obj = {}
+                    if(arr.length > 0){
+                        obj ={
+                            name:arr,
+                            thisWeek:larr,
+                            lastWeek:tarr
+                        }
+                        resolve(obj);
+                    }else{
+                        obj ={
+                            name:[],
+                            thisWeek:[],
+                            lastWeek:[]
+                        }
+                        reject(obj);
+                    }
+                    
+                }).then(function(res){
+                    option.xAxis[0].data = res.name;
+                    option.series[0]['data'] = res.thisWeek;
+                    option.series[1]['data'] = res.lastWeek;
+                    myChart.setOption(option);
+                })
+            })
+        })
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        body{
+            font-size: 0;
+        }
+        .box{
+            overflow: hidden;
+            width: 100%;
+            border: 1px salmon solid;
+            padding: 50px;
+            position: relative;
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+        }
+        .box>div{
+            width: 40%;
+            margin: auto;
+            border: 1px salmon solid;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+        }
+        .box>div span{
+            display: inline-block;
+            width: 44px;
+            height: 44px;
+            line-height: 44px;
+            text-align: center;
+            border: 1px darkblue dashed;
+            margin-left: 5px;
+        }
+        .box>div img{
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            cursor:-webkit-grab;
+            cursor:-moz-grab;
+            cursor:grab;
+        }
+        .act{
+            cursor: pointer;
+            position: absolute;
+            background: goldenrod;
+            box-shadow: 0 0 2px 2px #555;
+            border-radius: 5px;
+            z-index: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="item">
+             <span class="first"><img src="images/user.png" alt="user"></span>
+             <span><img src="images/user.png" alt="user"></span>
+             <span><img src="images/user.png" alt="user"></span>
+             <span><img src="images/user.png" alt="user"></span>
+        </div>
+        <div class="item">
+             <span><img src="images/user.png" alt="user"></span>
+             <span><img src="images/user.png" alt="user"></span>
+             <span><img src="images/user.png" alt="user"></span>
+             <span><img src="images/user.png" alt="user"></span>
+        </div>
+        <div class="item">
+             <span><img src="images/user.png" alt="user"></span>
+             <span><img src="images/user.png" alt="user"></span>
+             <span><img src="images/user.png" alt="user"></span>
+             <span><img src="images/user.png" alt="user"></span>
+        </div>
+        <div class="item">
+            <span><img src="images/user.png" alt="user"></span>
+            <span><img src="images/user.png" alt="user"></span>
+            <span><img src="images/user.png" alt="user"></span>
+            <span><img src="images/user.png" alt="user"></span>
+       </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+        function stops(){
+            return false;
+        }
+        document.oncontextmenu=stops;
+        var tag = true
+        $(".item").on("mousedown",'span',function(e){
+            if(tag){
+                tag = false;
+                var that = this;
+                var disx = e.offsetX; //获取的拖拽过程的短线的长度（鼠标的位置离盒子边缘的位置）
+                var disy = e.offsetY;
+                var leftd,topd;
+                var oldIndex = $(this).closest('.item').addClass('old');
+                var $clone = $(this).clone(); //克隆
+                $clone.addClass('act').css({ //对克隆的盒子设置类名以及位置
+                    left: $(that).position().left,
+                    top: $(that).position().top,
+                });
+                $(that).closest('.item').append($clone);
+                $(that).html('');
+                $(".box").on('mousemove',function(e){
+                    e.preventDefault();
+                    leftd = e.pageX - $(this).offset().left - disx;
+                    topd = e.pageY -  $(this).offset().top - disy
+                    $clone.css({
+                        left: leftd,
+                        top: topd
+                    })
+                    
+                })
+
+                var boxd = $(".item").not('.old');
+                $clone.on('mouseup',function(){
+                    var self = $(this);
+                    var $clone2 = $(this).clone();
+                    boxd.each(function(index,item){
+                        var left = $(item).offset().left;
+                        var top = $(item).offset().top;
+                        var bottom = $(item).height()+top;
+                        var right = $(item).width()+left;
+                        console.log(parseInt(Math.floor(leftd)) >= parseInt(Math.floor(left)) && parseInt(Math.floor(leftd)) <= parseInt(Math.floor(right)) && parseInt(Math.floor(topd)) >= parseInt(Math.floor(top)) && parseInt(Math.floor(topd)) <= parseInt(Math.floor(bottom)))
+                        console.log(parseInt(Math.floor(leftd)),parseInt(Math.floor(top)))
+                        console.log(parseInt(Math.floor(left)),parseInt(Math.floor(right)),parseInt(Math.floor(top)),parseInt(Math.floor(bottom)))
+
+                        if(parseInt(Math.floor(leftd)) >= parseInt(Math.floor(left)) && parseInt(Math.floor(leftd)) <=parseInt(Math.floor(right)) && parseInt(Math.floor(topd)) >= parseInt(Math.floor(top)) && parseInt(Math.floor(topd)) <= parseInt(Math.floor(bottom))){
+                            $clone2.removeClass('act');
+                            var indexd = $(item).index();
+                            $(".item").eq(indexd).append($clone2);
+                            $clone.remove(); //移除克隆的盒子
+                            $(that).remove();
+                        }else{
+                            $clone2.removeClass('act');
+                            $clone2.attr('style','');
+                            $(that).closest('.item').append($clone2)
+                            $clone.remove();
+                            $(that).remove();
+                        }
+                        
+                    })
+                    tag = true;
+                    $(".old").removeClass('old');
+                    $('document').off('mousemove');
+                })
+            }
+            tag = true
+            return false;
+        })
+    </script>
+</body>
+</html>

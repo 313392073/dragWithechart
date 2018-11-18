@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>英语界面</title>
+	<link rel="stylesheet" href="css/landscape.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="http://at.alicdn.com/t/font_913192_t31s0j6tnzb.css">
+</head>
+<body>
+  <div id="print">
+	  <div style="display: flex;height: 100%;">
+		<!-- 左侧可滑动菜单-->
+		<div class="layout-left">
+			<div class="switch">
+				<span class="switch-arrow"></span>
+			</div>
+			<div class="login-user-info">
+				<img src="images/user.png" alt="">
+				<span class="login-user-name">张慈武</span>
+			</div>
+			<ul class="user-center-tools">
+				<li>
+					<i class="iconfont icon-graph"></i>
+					<div>消息</div>
+				</li>
+				<li>
+					<i class="iconfont icon-shujutongji"></i>
+					<div>分析</div>
+				</li>
+				<li>
+					<i class="iconfont icon-kecheng"></i>
+					<div>课堂</div>
+				</li>
+				<li>
+					<i class="iconfont icon-zuoyechaxun"></i>
+					<div>作业</div>
+				</li>
+			</ul>
+		</div>
+		<!-- 中间内容区域-->
+		<div class="layout-content">
+		<iframe class="body-iframe" id="iframe0" name="iframe0" src="page/student/read-short-sentences.html" width="100%" height="99%"
+			frameborder="0" data-id="" seamless></iframe>
+		</div>
+		<!-- 右侧导航菜单-->
+		<div class="layout-nav-right">
+			<div class="user-info">
+				<img src="images/user.png" alt="">
+				<dl></dl>
+				<dl>
+					<dt class="user-info-name">Jordon J</dt>
+					<dd>Administrator</dd>
+					
+				</dl>
+			</div>
+			<ul class="before-class"> 
+				<li>
+					<span class="navtitle">课前预习</span>
+				</li>
+				<li class="active">
+					<a href="https://www.baidu.com">朗读短句</a>
+				</li>
+				<li>
+					<a href="https://www.baidu.com">填写问卷</a>
+				</li>
+				<li>
+					<a href="https://www.baidu.com">分享偶像</a>
+				</li>
+			</ul>
+			<ul class="lesson-learn">
+				<li>
+					<span class="navtitle">课中学习</span>
+				</li>
+				<li>
+					<a href="">微片导入</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" style="position:relative;">自我诊断<span class="arrow closearrow"></span></a>
+					<ul class="secondary">
+						<li><a href="">-分析问卷</a></li>
+						<li><a href="">-自我诊断</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:void(0);" style="position:relative;">同伴共振<span class="arrow closearrow"></span></a>
+					<ul class="secondary">
+						<li><a href="">-导入句型</a></li>
+						<li><a href="">-分组示范</a></li>
+						<li><a href="">-导入句型</a></li>
+						<li><a href="">-口语练习</a></li>
+						<li><a href="">-重新分组</a></li>
+						<li><a href="">-递进练习</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:void(0);" style="position:relative;">语用实践<span class="arrow closearrow"></span></a>
+					<ul  class="secondary">
+						<li><a href="">-分组讨论</a></li>
+						<li><a href="">-小组汇报</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:void(0);" style="position:relative;">课堂总结<span class="arrow closearrow"></span></a>
+			
+					<ul class="secondary">
+						<li><a href="">-老师总结</a></li>
+						<li><a href="">-学生总结</a></li>
+					</ul>
+				</li>
+			</ul>
+			<ul class="after-class">
+				<li>
+					<span class="navtitle">课后扩展</span>
+				</li>
+				<li>
+					<a href="">观看视频</a>
+				</li>
+				<li>
+					<a href="">朗读短文</a>
+				</li>
+			</ul>
+			<div class="exit-login">退出登录</div>
+		</div>  
+	  </div>
+	   
+   </div>
+   <script type="text/javascript" src="js/jquery.min.js"></script>
+   <!-- <script type="text/javascript" src="js/landscape.js"></script> -->
+   <script>
+		$(".layout-nav-right").on('click', ' ul li a', function(e) {
+			var $this = $(this);
+			var animationSpeed = 200;
+			var checkElement=$(this).next();
+			if(checkElement.is('.secondary') && checkElement.is(':visible')) {// 已经 有二级菜单并可见
+				checkElement.slideUp(animationSpeed, function() {
+					$(this).prev().children('.arrow').removeClass('spreadarrow');
+					$(this).prev().children('.arrow').addClass('closearrow');
+				});
+			}else if((checkElement.is('.secondary')) && (!checkElement.is(':visible'))) {// 已经 有二级菜单并不可见
+				checkElement.slideDown(animationSpeed, function() {
+					$(this).prev().children('.arrow').removeClass('closearrow');
+					$(this).prev().children('.arrow').addClass('spreadarrow');
+				})
+			}else if(!checkElement.is('.secondary')){
+				
+				
+				 $(this).parents('.layout-nav-right').find('li').removeClass('active');
+				$(this).parent('li').addClass('active');
+			}
+			
+			//防止有链接跳转
+			e.preventDefault();
+			addIframe($this);
+		});
+		/* $('.layout-nav-right').on('click','ul li a',function(){
+			var secondElement=$(this).next();
+			if(secondElement.is('.secondary') && checkElement.is(':visible')) {// 已经 有二级菜单并可见
+			$(this).parents('.layout-nav-right').find('li').removeClass('active');
+			$(this).parent('li').addClass('active');
+			
+		}) */
+		
+		/*添加iframe*/
+		function addIframe(cur){
+		    var $this = cur;
+		    var h = $this.attr("href");
+		    if (h == "" || $.trim(h).length == 0) {
+		        return false;
+		    }else{
+				$('.body-iframe').attr('src',h);
+			}
+		}
+   </script>
+</body>
+</html>

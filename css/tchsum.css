@@ -1,0 +1,314 @@
+@charset "utf-8";
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+.clearfix::after {
+  clear: both;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+.tchsum-wrapper {
+  width: 100%;
+  border-top: 2px solid #e6eaee;
+  padding: 1.25rem;
+}
+.tchsum-wrapper .pro-wrapper {
+  border: 1px solid #e6eaee;
+  border-top: none;
+}
+.tchsum-wrapper .pro-wrapper .pro-left {
+  float: left;
+  width: 77.84%;
+  padding-top: 2%;
+  padding-left: 2%;
+  border-top: 1px solid #e6eaee;
+  position: relative;
+}
+.tchsum-wrapper .pro-wrapper .pro-left .echarts-box {
+  width: 100%;
+  min-height: 21.1rem;
+}
+.tchsum-wrapper .pro-wrapper .pro-left .select-box {
+  position: absolute;
+  z-index: 999;
+  right: 11%;
+  top: 5%;
+  width: 6.25rem;
+  height: 1.6rem;
+  line-height: 1.6rem;
+  padding-left: 0.75rem;
+  background-image: linear-gradient(0deg, #F2F4F7 0%, #FFFFFF 100%);
+  border: 1px solid #CED0DA;
+  border-radius: 3.2px;
+}
+.tchsum-wrapper .pro-wrapper .pro-left .select-box > P {
+  font-size: 0.24rem;
+  color: #354052;
+  position: relative;
+  height: 100%;
+  line-height: 1.6rem;
+  cursor: pointer;
+}
+.tchsum-wrapper .pro-wrapper .pro-left .select-box > P i {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  margin-top: -0.4rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  background: url("../images/selarrow.png") no-repeat center;
+  background-size: cover;
+}
+.tchsum-wrapper .pro-wrapper .pro-left .select-box > P i.active {
+  background: url("../images/seluparr.png") no-repeat center;
+  background-size: cover;
+}
+.tchsum-wrapper .pro-wrapper .pro-left .select-box .checkbox-box {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 1.6rem;
+  padding-left: 0.75rem;
+  background-color: #E6EAEE;
+  display: none;
+}
+.tchsum-wrapper .pro-wrapper .pro-left .select-box .checkbox-box .checkbox-item {
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+  margin-right: 0.25rem;
+}
+.tchsum-wrapper .pro-wrapper .pro-left .select-box .checkbox-box .checkbox-item .input_checkbox {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-color: #ccc;
+  display: none;
+}
+.tchsum-wrapper .pro-wrapper .pro-left .select-box .checkbox-box .checkbox-item .input_checkbox:checked + i {
+  background: #2489c5;
+}
+.tchsum-wrapper .pro-wrapper .pro-left .select-box .checkbox-box .checkbox-item > i {
+  font-size: 0.7rem;
+  font-style: normal;
+  display: inline-block;
+  width: 0.9rem;
+  height: 0.9rem;
+  text-align: center;
+  line-height: 0.9rem;
+  color: #E6EAEE;
+  vertical-align: middle;
+  margin: -0.1rem 0.1rem 0.05rem 0px;
+  border: #2489c5 1px solid;
+  border-radius: 4px;
+}
+.tchsum-wrapper .pro-wrapper .pro-left .select-box .checkbox-box > div {
+  margin: 0.5rem 0;
+  text-align: center;
+}
+.tchsum-wrapper .pro-wrapper .pro-left .select-box .checkbox-box > div button {
+  background-color: #2489c5;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  margin-right: 0.25rem;
+  line-height: 1rem;
+}
+.tchsum-wrapper .pro-wrapper .pro-right {
+  float: left;
+  width: 22.16%;
+  border: 1px #E6EAEE solid;
+  border-right: none;
+  border-bottom: none;
+  height: 100%;
+  background-color: #FAFBFC;
+}
+.tchsum-wrapper .pro-wrapper .pro-right .pro-detail-top {
+  padding: 8% 8% 5%;
+}
+.tchsum-wrapper .pro-wrapper .pro-right .pro-detail-top > h3 {
+  font-size: 1rem;
+  color: #354052;
+  font-weight: normal;
+  position: relative;
+  margin-bottom: 5%;
+}
+.tchsum-wrapper .pro-wrapper .pro-right .pro-detail-top > h3 p {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -0.6rem;
+  font-size: 0.7rem;
+  color: #FFFFFF;
+  background: #D54642;
+  border-radius: 0.2rem;
+  padding: 0.2rem 0.3rem;
+}
+.tchsum-wrapper .pro-wrapper .pro-right .pro-detail-top > h3 p img {
+  vertical-align: top;
+  margin-right: 0.15rem;
+}
+.tchsum-wrapper .pro-wrapper .pro-right .pro-detail-top > p {
+  font-size: 0.6rem;
+  color: #7F8FA4;
+  margin-bottom: 5%;
+}
+.tchsum-wrapper .pro-wrapper .pro-right .pro-detail-box {
+  border-top: 1px solid #E6EAEE;
+  padding: 3% 0 5%;
+}
+.tchsum-wrapper .pro-wrapper .pro-right .pro-detail-box .detail-title-box {
+  width: 84%;
+  margin: 0.75rem auto 0.25rem;
+}
+.tchsum-wrapper .pro-wrapper .pro-right .pro-detail-box .detail-title-box span {
+  float: left;
+  font-size: 0.7rem;
+  color: #7F8FA4;
+}
+.tchsum-wrapper .pro-wrapper .pro-right .pro-detail-box .detail-title-box a {
+  float: right;
+  font-size: 0.6rem;
+  color: #1A91EB;
+}
+.tchsum-wrapper .pro-wrapper .pro-right .pro-detail-box .detail-item-box {
+  width: 84%;
+  margin: 0 auto;
+}
+.tchsum-wrapper .pro-wrapper .pro-right .pro-detail-box .detail-item-box li {
+  line-height: 1.5rem;
+  border-bottom: 1px solid #E6EAEE;
+}
+.tchsum-wrapper .pro-wrapper .pro-right .pro-detail-box .detail-item-box li .detail-item-left {
+  float: left;
+  font-size: 0.6rem;
+  color: #354052;
+}
+.tchsum-wrapper .pro-wrapper .pro-right .pro-detail-box .detail-item-box li .detail-item-right {
+  float: right;
+  font-size: 0.6rem;
+  color: #354052;
+}
+.tchsum-wrapper .pro-wrapper .pro-right .pro-detail-box .detail-item-box li:last-child {
+  border-bottom: none;
+}
+.tchsum-wrapper .pro-detail-wrapper {
+  width: 100%;
+  margin-top: 1.25rem;
+}
+.tchsum-wrapper .pro-detail-wrapper table {
+  width: 100%;
+}
+.tchsum-wrapper .pro-detail-wrapper table .tr-title {
+  width: 100%;
+  background-image: linear-gradient(0deg, #F4F7FA 0%, #FFFFFF 100%);
+  border: 1px solid #E6EAEE;
+  height: 2.25rem;
+  line-height: 2.25rem;
+}
+.tchsum-wrapper .pro-detail-wrapper table .tr-title th {
+  font-size: 0.7rem;
+  color: #354052;
+  text-align: left;
+}
+.tchsum-wrapper .pro-detail-wrapper table .tr-title th.th-name,
+.tchsum-wrapper .pro-detail-wrapper table .tr-title th.th-total {
+  width: 25%;
+  text-indent: 1.25rem;
+}
+.tchsum-wrapper .pro-detail-wrapper table .tr-title th.th-good {
+  width: 17%;
+}
+.tchsum-wrapper .pro-detail-wrapper table .tr-title th.th-zan {
+  width: 13%;
+}
+.tchsum-wrapper .pro-detail-wrapper table .tr-title th.th-report {
+  width: 20%;
+}
+.tchsum-wrapper .pro-detail-wrapper table tbody tr {
+  border: 1px solid #E6EAEE;
+}
+.tchsum-wrapper .pro-detail-wrapper table tbody tr td {
+  font-size: 0.6rem;
+  color: #354052;
+  text-align: left;
+  line-height: 3rem;
+}
+.tchsum-wrapper .pro-detail-wrapper table tbody tr td.td-name {
+  text-indent: 1.25rem;
+}
+.tchsum-wrapper .pro-detail-wrapper table tbody tr td.td-name img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  margin-right: 0.75rem;
+  vertical-align: middle;
+}
+.tchsum-wrapper .pro-detail-wrapper table tbody tr td.td-good span {
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  border: 1px solid red;
+  vertical-align: middle;
+  margin-right: 0.25rem;
+}
+.tchsum-wrapper .pro-detail-wrapper table tbody tr td.td-good span.color1 {
+  border: 1px solid #F86B67;
+}
+.tchsum-wrapper .pro-detail-wrapper table tbody tr td.td-good span.color2 {
+  border: 1px solid #C396E3;
+}
+.tchsum-wrapper .pro-detail-wrapper table tbody tr td.td-good span.color3 {
+  border: 1px solid #1D92EB;
+}
+.tchsum-wrapper .pro-detail-wrapper table tbody tr td.td-good span.color4 {
+  border: 1px solid #84B800;
+}
+.tchsum-wrapper .pro-detail-wrapper table tbody tr td.td-total {
+  vertical-align: middle;
+}
+.tchsum-wrapper .pro-detail-wrapper table tbody tr td.td-total span {
+  float: left;
+  width: 15%;
+  margin-right: 5%;
+}
+.tchsum-wrapper .pro-detail-wrapper table tbody tr td.td-total div {
+  float: left;
+  width: 60%;
+  margin-top: 1.3rem;
+  height: 0.25rem;
+  border-radius: 4px;
+  position: relative;
+  background-color: #E6EAEE;
+}
+.tchsum-wrapper .pro-detail-wrapper table tbody tr td.td-total div p {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20%;
+  height: 100%;
+  border-radius: 4px;
+  background-color: #1A91EB;
+}
+.tchsum-wrapper .pro-detail-wrapper table tbody tr td.td-total div p.percent78 {
+  width: 70%;
+}
+.tchsum-wrapper .pro-detail-wrapper table tbody tr td.td-total div p.percent83 {
+  width: 83%;
+}
+.tchsum-wrapper .pro-detail-wrapper table tbody tr td.td-report img {
+  vertical-align: middle;
+  margin-right: 0.25rem;
+}
